@@ -26,37 +26,36 @@ The notebook available here showcases work related to the above questions.
 
 <h2>File Descriptions</h2>
 
-The data is contained in three files:
-
-portfolio.json - containing offer ids and meta data about each offer (duration, type, etc.)
-profile.json - demographic data for each customer
-transcript.json - records for transactions, offers received, offers viewed, and offers completed
-Here is the schema and explanation of each variable in the files:
-
-portfolio.json
-
-id (string) - offer id
-offer_type (string) - the type of offer ie BOGO, discount, informational
-difficulty (int) - the minimum required to spend to complete an offer
-reward (int) - the reward is given for completing an offer
-duration (int) - time for the offer to be open, in days
-channels (list of strings)
 profile.json
+Rewards program users (17000 users x 5 fields)
 
-age (int) - age of the customer
-became_member_on (int) - the date when customer created an app account
-gender (str) - gender of the customer (note some entries contain 'O' for other rather than M or F)
-id (str) - customer id
-income (float) - customer's income
+gender: (categorical) M, F, O, or null
+age: (numeric) missing value encoded as 118
+id: (string/hash)
+became_member_on: (date) format YYYYMMDD
+income: (numeric)
+portfolio.json
+Offers sent during 30-day test period (10 offers x 6 fields)
+
+reward: (numeric) money awarded for the amount spent
+channels: (list) web, email, mobile, social
+difficulty: (numeric) money required to be spent to receive reward
+duration: (numeric) time for offer to be open, in days
+offer_type: (string) bogo, discount, informational
+id: (string/hash)
 transcript.json
+Event log (306648 events x 4 fields)
 
-event (str) - record description (ie transaction, offer received, offer viewed, etc.)
-person (str) - customer id
-time (int) - time in hours since the start of the test. The data begins at time t=0
-value - (dict of strings) - either an offer id or transaction amount depending on the record
-Results
+person: (string/hash)
+event: (string) offer received, offer viewed, transaction, offer completed
+value: (dictionary) different values depending on event type
+offer id: (string/hash) not associated with any "transaction"
+amount: (numeric) money spent in "transaction"
+reward: (numeric) money gained from "offer completed"
+time: (numeric) hours after start of test
 
-<h2>Resutl</h2>
+
+<h2>Result</h2>
 The main findings of the code can be found at the post available here.
 
 Based on the transcript records, we build an user-item-matrix that represents how users responded to the offers they received. We then split the records into the training set and the test set and trained our SVD algorithm to predict how a user responses to a particular offer. We achieved the lowest mean square error around 0.003823 with 15 latent features with the training set and around 0.009175 with 10 latent features with the testing set. After that, we created a recommendation engine that recommends Starbucks which offer should be sent to a particular user.
