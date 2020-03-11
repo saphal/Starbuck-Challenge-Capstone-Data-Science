@@ -58,9 +58,25 @@ time: (numeric) hours after start of test
 <h2>Result</h2>
 The main findings of the code can be found at the post available here.
 
-Based on the transcript records, we build an user-item-matrix that represents how users responded to the offers they received. We then split the records into the training set and the test set and trained our SVD algorithm to predict how a user responses to a particular offer. We achieved the lowest mean square error around 0.003823 with 15 latent features with the training set and around 0.009175 with 10 latent features with the testing set. After that, we created a recommendation engine that recommends Starbucks which offer should be sent to a particular user.
+Customers income ranges from 30,000 and 120,000 with most of the customers’ incomes fall between 50,000 and 75,0000.
 
-In the later section, we found out which demographic groups respond best to which offer type. Female respond much better than men, in both BOGO and discount. Men react slightly better to discount than BOGO. We also found that it is better to promote the offer via social media. Among the ten offers, sending buy 10 dollars get 2 dollars off within 10 days offer via email, web, mobile and social makes Starbucks gain more. It is the best offer so far!
+According to the available data, There are three ‘gender’ categories into which the customers falls in ( M, F and O).
+
+The most common offer type among all age groups is the BOGO , followed by the Discount Offers. Whereas, the least common offer to be sent is the informational offers. I believe that BOGO offers are more attractive compared to other offers provided by Starbucks.
+
+Customers with High income (Above 90,000) are mostly female customers. Whereas, Average Income(30,000 - 60,000) customers are mostly males.
+
+Males and Females are pretty close when it comes to the time spent to complete an offer. Both males and females take about 17 days to da so.
+
+2017 was the best year for Starbucks in terms of the number of new members. Around %38 of all the customers on our dataset regiseterd as members on this specific year.
+
+Both genders like BOGO and Discount offers and they have the same reaction toward Informational offers, they both seem to be not interested to it.
+
+The mean time it takes a customer to complete an offer is less than 16 days (372 hours).
+
+Females completed around 75% of the offers they viewed, it is 16% more than males who just completed 58% of the offers they viewed. 
+
+Feamles seems to be convinced by the promotion easier than males.
 
 <h2>Licensing, Authors, Acknowledgements</h2>
 
