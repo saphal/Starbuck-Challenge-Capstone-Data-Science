@@ -84,4 +84,5 @@ Must give credit to Stakbucks for the data.
 
 ### Author
 Saphal Adhikari
+blogpost : https://medium.com/@franticarsenal/who-is-more-attracted-to-starbuck-promotion-offer-male-female-aea8a1199a1e?sk=477c2cd08731b4530dae1c15474fef85
 
