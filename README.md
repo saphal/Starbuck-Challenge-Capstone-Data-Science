@@ -19,8 +19,9 @@ It is the Starbuck's Capstone Challenge of the Data Scientist Nanodegree in Udac
 
 We are interested to answer the following two questions:
 
-Which offer should be sent to a particular customer to let the customer buy more?
-Which demographic groups respond best to which offer type?
+1. Average income of customer?
+2. Average age of customer?
+3. The most common promotion offer?
 File Descriptions
 The notebook available here showcases work related to the above questions.
 
