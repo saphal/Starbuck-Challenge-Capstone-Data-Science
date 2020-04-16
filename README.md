@@ -9,7 +9,7 @@ Project in Data Scientist Nanodegree of Udacity
 3. File Descriptions
 4. Results
 5. Licensing, Authors, and Acknowledgements
-6. Installation
+6. Author
 
 <h2>Installation</h2>
 I would recommend to use anoconda and jupyter libraries.
